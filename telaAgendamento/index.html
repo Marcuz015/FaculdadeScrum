@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendamento</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <div class="container">
+    <h3>Escolha um dia</h3>
+    <input type="date" id="data" min="" />
+
+    <h3>Selecione um horário</h3>
+    <div id="horariosContainer" class="horarios"></div>
+
+    <button class="concluir" id="btnConcluir">Concluir</button>
+  </div>
+
+  <!-- Modal de confirmação -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <div class="check-animation">
+        <svg class="checkmark" viewBox="0 0 52 52">
+          <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+          <path class="checkmark-check" fill="none" d="M14 27l7 7 16-16"/>
+        </svg>
+      </div>
+      <h2>Agendamento Confirmado!</h2>
+      <p id="textoConfirmacao"></p>
+      <button id="fecharModal" class="fechar">Fechar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

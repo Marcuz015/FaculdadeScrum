@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+body {
+    background-image: url(fundo.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.container {
+  width: 360px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 24px;
+  color: #111;
+}
+
+header p {
+  font-size: 16px;
+  color: #333;
+}
+
+header span {
+  color: #1565C0;
+  font-weight: bold;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 14px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  font-size: 17px;
+  color: #222;
+}
+
+.card p {
+  font-size: 13px;
+  color: #444;
+}
+
+.alerta {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 10px 15px;
+  border-radius: 12px;
+  position: relative;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.alerta p {
+  color: #222;
+  font-size: 14px;
+}
+
+.notificacao {
+  background: #c62828;
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guia-titulo {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 15px;
+  border-radius: 15px;
+  color: #111;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.item:hover {
+  background: rgba(255, 255, 255, 0.7);
+  transform: scale(1.03);
+}
+
+.item i {
+  font-size: 28px;
+  color: #c62828;
+  flex-shrink: 0;
+}
+
+.item h4 {
+  margin-bottom: 4px;
+  font-size: 15px;
+  color: #111;
+}
+
+.item p {
+  font-size: 13px;
+  color: #444;
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triagem</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header-triagem">
+      <a href="index.html" class="voltar">⬅</a>
+      <h1>Triagem</h1>
+    </header>
+
+    <main>
+      <section class="introducao">
+        <p>Bem-vindo(a) à etapa de triagem.</p>
+        <p class="subtitle">
+          A triagem é o nosso compromisso com a sua saúde e com a segurança de cada transfusão. 
+          Por favor, responda com atenção e verdade.
+        </p>
+      </section>
+
+      <form action="#" method="post" class="form-triagem">
+        <fieldset class="info-pessoal">
+          <legend>Informações Pessoais</legend>
+
+          <div class="campo">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+          </div>
+
+          <div class="campo">
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" min="16" max="69" required>
+            <small id="msg-idade" class="mensagem"></small>
+          </div>
+
+          <div id="pergunta-doacao-antes60" class="campo" style="display: none;">
+            <label for="doacaoAntes60">Você já realizou alguma doação antes dos 60 anos?</label>
+            <select id="doacaoAntes60" name="doacaoAntes60">
+              <option value="selecione">Selecione</option>
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="naturalidade">Naturalidade:</label>
+            <input type="text" id="naturalidade" name="naturalidade" required>
+          </div>
+
+          <div class="campo">
+            <label for="peso">Peso (kg):</label>
+            <input type="number" id="peso" name="peso" required>
+            <small id="msg-peso" class="mensagem"></small>
+          </div>
+
+          <div class="campo">
+            <label for="altura">Altura (cm):</label>
+            <input type="number" id="altura" name="altura" required>
+          </div>
+
+          <div class="campo">
+            <label for="genero">Sexo biológico:</label>
+            <select id="genero" name="genero" required>
+              <option value="">Selecione</option>
+              <option value="feminino">Feminino</option>
+              <option value="masculino">Masculino</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <button type="button" id="botao-proxima-etapa" class="botao-navegacao">Prosseguir para o Questionário</button>
+
+        <section id="secao-questionario" style="display: none;">
+          <h2>Questionário de Triagem</h2>
+          <p class="responsabilidade">Honestidade também salva vidas. Seja sincero no questionário a seguir.</p>
+
+          <fieldset>
+            <legend>Doações Anteriores</legend>
+
+            <div class="campo">
+              <label for="ultimaDoacao">1. Data da sua última doação de sangue:</label>
+              <input type="date" id="ultimaDoacao" name="ultimaDoacao">
+            </div>
+
+            <div id="perguntas-homens" style="display:none;">
+              <div class="pergunta">
+                <p>2. Você doou sangue nas últimas 8 semanas?</p>
+                <label><input type="radio" name="homem_q1" value="sim">Sim</label>
+                <label><input type="radio" name="homem_q1" value="nao">Não</label>
+              </div>
+            </div>
+
+            <div id="perguntas-mulheres" style="display:none;">
+              <div class="pergunta">
+                <p>2. Você doou sangue nas últimas 12 semanas?</p>
+                <label><input type="radio" name="mulher_q1" value="sim">Sim</label>
+                <label><input type="radio" name="mulher_q1" value="nao">Não</label>
+              </div>
+
+              <div class="pergunta">
+                <p>3. Você passou por parto ou aborto nos últimos 12 meses?</p>
+                <label><input type="radio" name="mulher_q2" value="sim">Sim</label>
+                <label><input type="radio" name="mulher_q2" value="nao">Não</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Procedimentos Recentes</legend>
+            <div class="pergunta">
+              <p>4. Você recebeu alguma vacina recentemente (nas últimas 4 semanas)?</p>
+              <label><input type="radio" name="q4" value="sim">Sim</label>
+              <label><input type="radio" name="q4" value="nao">Não</label>
+            </div>
+            <div class="pergunta">
+              <p>5. Você teve sintomas de gripe, resfriado ou diarreia nos últimos 7 dias?</p>
+              <label><input type="radio" name="q5" value="sim">Sim</label>
+              <label><input type="radio" name="q5" value="nao">Não</label>
+            </div>
+            <div class="pergunta">
+              <p>6. Você está em tratamento com antibióticos ou terminou recentemente um tratamento?</p>
+              <label><input type="radio" name="q6" value="sim">Sim</label>
+              <label><input type="radio" name="q6" value="nao">Não</label>
+            </div>
+            <div class="pergunta">
+              <p>7. Você passou por algum procedimento médico, como endoscopia, colonoscopia ou cirurgia odontológica nas últimas semanas?</p>
+              <label><input type="radio" name="q7" value="sim">Sim</label>
+              <label><input type="radio" name="q7" value="nao">Não</label>
+            </div>
+            <div class="pergunta">
+              <p>8. Você fez alguma tatuagem, maquiagem definitiva ou micropigmentação nos últimos 6 meses?</p>
+              <label><input type="radio" name="q8" value="sim">Sim</label>
+              <label><input type="radio" name="q8" value="nao">Não</label>
+            </div>
+            <div class="pergunta">
+              <p>9. Você colocou piercing ou brinco recentemente?</p>
+              <label><input type="radio" name="q9" value="sim">Sim</label>
+              <label><input type="radio" name="q9" value="nao">Não</label>
+            </div>
+            <div class="pergunta">
+              <p>10. Você realizou alguma cirurgia nos últimos 6 meses?</p>
+              <label><input type="radio" name="q10" value="sim">Sim</label>
+              <label><input type="radio" name="q10" value="nao">Não</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Medicação e Tratamentos</legend>
+            <div class="pergunta">
+              <p>11. Você está usando medicamentos para prevenir infecção por HIV (PrEP ou PEP)?</p>
+              <label><input type="radio" name="q11" value="sim">Sim</label>
+              <label><input type="radio" name="q11" value="nao">Não</label>
+            </div>
+            <div class="pergunta">
+              <p>12. Você recebeu transfusão de sangue, plasma, plaquetas ou derivados nos últimos 6 meses?</p>
+              <label><input type="radio" name="q12" value="sim">Sim</label>
+              <label><input type="radio" name="q12" value="nao">Não</label>
+            </div>
+          </fieldset>
+          
+           <fieldset>
+            <legend>Condições Médicas</legend>
+            <div class="pergunta">
+              <p>13. Você já teve diagnóstico positivo para HIV?</p>
+              <label><input type="radio" name="q13" value="sim">Sim</label>
+              <label><input type="radio" name="q13" value="nao">Não</label>
+            </div>
+            <div class="pergunta">
+              <p>14. Você já teve hepatite B ou C?</p>
+              <label><input type="radio" name="q14" value="sim">Sim</label>
+              <label><input type="radio" name="q14" value="nao">Não</label>
+            </div>
+            <div class="pergunta">
+              <p>15. Você já teve doença de Chagas?</p>
+              <label><input type="radio" name="q15" value="sim">Sim</label>
+              <label><input type="radio" name="q15" value="nao">Não</label>
+            </div>
+            <div class="pergunta">
+              <p>16. Você já teve algum tipo de câncer, incluindo leucemia?</p>
+              <label><input type="radio" name="q16" value="sim">Sim</label>
+              <label><input type="radio" name="q16" value="nao">Não</label>
+            </div>
+          </fieldset>  
+
+          <button type="button" id="enviar-triagem" class="botao-navegacao" >Enviar</button>
+        </section>
+      </form>
+    </main>
+  </div>
+
+<div id="modal-resultado" class="modal">
+  <div class="modal-conteudo">
+    <span class="fechar" id="fechar-modal">&times;</span>
+    <h2 id="titulo-modal"></h2>
+    <p id="mensagem-modal"></p>
+    <a href="../telaAgendamento/index.html" style="text-decoration: none; color: white;">
+      <button id="botao-modal" class="botao-navegacao">OK</button> 
+    </a>
+  </div>
+</div>  
+  <script src="script.js"></script>
+</body>
+</html>
